@@ -189,7 +189,7 @@ public class UserInterfaceImpl implements IUserInterfaceContract.View,
     @Override
     public void updateBoard(SudokuGame game) {
         for (int xIndex = 0; xIndex < 9; xIndex++) {
-            for (int yIndex = 0; xIndex < 9; yIndex++) {
+            for (int yIndex = 0; yIndex < 9; yIndex++) {
                 TextField tile = textFieldCoordinates.get(new Coordinates(xIndex, yIndex));
 
                 String value = Integer.toString(
@@ -207,7 +207,7 @@ public class UserInterfaceImpl implements IUserInterfaceContract.View,
                         tile.setStyle("-fx-opacity: 1;");
                         tile.setDisable(false);
                     } else {
-                        tile.setStyle("-fx-opacity: 0;");
+                        tile.setStyle("-fx-opacity: 0.8;");
                         tile.setDisable(true);
                     }
                 }
