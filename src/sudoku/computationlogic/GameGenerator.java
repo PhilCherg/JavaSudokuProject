@@ -2,6 +2,7 @@ package sudoku.computationlogic;
 
 import sudoku.problemdomain.Coordinates;
 
+import java.security.cert.X509Certificate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -10,7 +11,15 @@ import static sudoku.problemdomain.SudokuGame.GRID_BOUNDARY;
 
 public class GameGenerator {
     public static int [][] getNewGameGrid() {
-        return  unsolveGame(getSolvedGame());
+        int [][] test = unsolveGame(getSolvedGame());
+        for (int i = 0; i < GRID_BOUNDARY; i++) {
+            for (int j = 0; j < GRID_BOUNDARY; j++) {
+                System.out.print(test[i][j] + " ");
+            }
+            System.out.println();
+        }
+        System.out.println();
+        return test;
     }
 
     private static int[][] unsolveGame(int[][] solvedGame) {
@@ -94,9 +103,9 @@ public class GameGenerator {
     }
 
     private static void clearArray(int[][] newGrid) {
-        for (int xIndex = 0; xIndex < GRID_BOUNDARY; xIndex++) {
-            for (int yIndex = 0; yIndex < GRID_BOUNDARY; yIndex++) {
-                newGrid[xIndex][yIndex] = 0;
+        for (int i = 0; i < GRID_BOUNDARY; i++) {
+            for (int j = 0; j < GRID_BOUNDARY; j++) {
+                newGrid[i][j] = 0;
             }
         }
     }

@@ -5,7 +5,7 @@ import sudoku.persisitance.LocalStorageImpl;
 import sudoku.problemdomain.IStorage;
 import sudoku.problemdomain.SudokuGame;
 import sudoku.userinterface.IUserInterfaceContract;
-import sudoku.userinterface.logic.ControlLogic;
+import sudoku.userinterface.ControlLogic;
 
 import java.io.IOException;
 

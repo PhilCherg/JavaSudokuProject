@@ -12,9 +12,20 @@ import static sudoku.problemdomain.SudokuGame.GRID_BOUNDARY;
 
 public class GameLogic {
     public static SudokuGame getNewGame() {
+        int[][] grid = GameGenerator.getNewGameGrid();
+        boolean[][] isInitial = new boolean[GRID_BOUNDARY][GRID_BOUNDARY];
+        for (int i = 0; i < GRID_BOUNDARY; i++) {
+            for (int j = 0; j < GRID_BOUNDARY; j++) {
+                isInitial[i][j] = (grid[i][j] != 0);
+                System.out.print(isInitial[i][j] ? "1 " : "0 ");
+            }
+            System.out.println();
+        }
+        System.out.println();
         return new SudokuGame(
                 GameState.NEW,
-                GameGenerator.getNewGameGrid()
+                grid,
+                isInitial
         );
     }
 
