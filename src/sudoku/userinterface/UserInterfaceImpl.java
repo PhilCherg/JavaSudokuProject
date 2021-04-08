@@ -222,6 +222,7 @@ public class UserInterfaceImpl implements IUserInterfaceContract.View, EventHand
                 if (value.equals("0")) value = "";
                 tile.setText(value);
 
+                //Make the initial tiles black and uneditable
                 if (initialTiles[i][j]) {
                     tile.setStyle("-fx-text-fill: black;");
                     tile.setStyle("-fx-opacity: 1;");
@@ -234,6 +235,7 @@ public class UserInterfaceImpl implements IUserInterfaceContract.View, EventHand
         }
     }
 
+    //Create a popup with a message for the user
     @Override
     public void showDialog(String message) {
         Alert dialog = new Alert(Alert.AlertType.CONFIRMATION, message, ButtonType.OK);
@@ -242,23 +244,22 @@ public class UserInterfaceImpl implements IUserInterfaceContract.View, EventHand
         if (dialog.getResult() == ButtonType.OK) listener.onDialogClick();
     }
 
+    //Create a popup with an error
     @Override
     public void showError(String message) {
         Alert dialog = new Alert(Alert.AlertType.ERROR, message, ButtonType.OK);
         dialog.showAndWait();
     }
 
+    //This method deals with any key events that are detected
     @Override
     public void handle(KeyEvent event) {
         if (event.getEventType() == KeyEvent.KEY_PRESSED) {
             if (event.getText().matches("[0-9]")) {
                 int value = Integer.parseInt(event.getText());
                 handleInput(value, event.getSource());
-            } else if (event.getCode() == KeyCode.BACK_SPACE) {
-                handleInput(0, event.getSource());
             } else {
-                ((TextField) event.getSource()).clear();
-                System.out.println("Current text: "+ ((TextField) event.getSource()).getText());
+                handleInput(0, event.getSource());
             }
         }
         event.consume();

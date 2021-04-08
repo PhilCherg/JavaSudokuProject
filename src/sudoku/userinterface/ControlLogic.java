@@ -41,7 +41,7 @@ public class ControlLogic implements IUserInterfaceContract.EventListener {
             It uses the updates copy of the gameData with the user input
             This is done to determine the new game state after the user input
              */
-            gameData = new SudokuGame(GameLogic.checkForCompletition(newGridState), newGridState, initialTiles);
+            gameData = new SudokuGame(GameLogic.checkForCompletion(newGridState), newGridState, initialTiles);
 
             storage.updateGameData(gameData);       //Update the game state using the IStorage field
             view.updateSquare(x, y, input);         //Update the visual representation of the grid using the IUserInterfaceContract.View field

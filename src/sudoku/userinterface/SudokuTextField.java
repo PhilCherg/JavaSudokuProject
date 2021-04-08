@@ -40,8 +40,8 @@ public class SudokuTextField extends TextField {
      */
     @Override
     public void replaceSelection(String s) {
-        if (!s.matches("[0-9]")) {      //Check whether the input is a number between 0 and 9 using regex
+       if (!s.matches("[0-9]")) {      //Check whether the input is a number between 0 and 9 using regex
             super.replaceSelection(s);          //Call the parent method
-        }
+       }
     }
 }

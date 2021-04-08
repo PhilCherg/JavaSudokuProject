@@ -2,6 +2,10 @@ package sudoku.problemdomain;
 
 import java.util.Objects;
 
+/*
+A simple class that has fields for the x and y coordinates of tiles in the grid
+Additionally, it has a custom hashcode method for the purposes of the project
+ */
 public class Coordinates {
     private final int x;
     private final int y;
