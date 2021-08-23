@@ -5,8 +5,6 @@ import sudoku.constants.GameState;
 import sudoku.constants.Messages;
 import sudoku.problemdomain.IStorage;
 import sudoku.problemdomain.SudokuGame;
-import sudoku.userinterface.IUserInterfaceContract;
-
 import java.io.IOException;
 
 /*

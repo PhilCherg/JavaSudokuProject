@@ -1,8 +1,6 @@
 package sudoku.computationlogic;
 
-import org.ietf.jgss.GSSManager;
 import sudoku.problemdomain.Coordinates;
-
 import static sudoku.problemdomain.SudokuGame.GRID_BOUNDARY;
 
 /*

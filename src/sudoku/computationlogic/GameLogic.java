@@ -3,7 +3,6 @@ package sudoku.computationlogic;
 import sudoku.constants.GameState;
 import sudoku.constants.Rows;
 import sudoku.problemdomain.SudokuGame;
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;

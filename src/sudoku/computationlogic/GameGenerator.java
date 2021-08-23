@@ -1,7 +1,6 @@
 package sudoku.computationlogic;
 
 import sudoku.problemdomain.Coordinates;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;

@@ -2,7 +2,6 @@ package sudoku.persisitance;
 
 import sudoku.problemdomain.IStorage;
 import sudoku.problemdomain.SudokuGame;
-
 import java.io.*;
 
 /*
